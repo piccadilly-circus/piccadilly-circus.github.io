@@ -3,7 +3,6 @@ language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 - rvm list
-- $(travis_internal_ruby) -v
 
 job:
   include:
