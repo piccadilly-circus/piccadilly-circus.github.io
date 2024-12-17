@@ -5,17 +5,20 @@ script:
 - rvm list
 - $(travis_internal_ruby) -v
 
-deploy:
-  edge: true
-  provider: pages:git
-  token: "$GITHUB_TOKEN"
-  verbose: true
-  cleanup: false
-  keep_history: true
-  url: github.com
-  local_dir: pages/
-  edge: true
-  on:
-    branch:
-    - main
-    - deploy
+job:
+  include:
+    dist: focal
+    deploy:
+      edge: true
+      provider: pages:git
+      token: "$GITHUB_TOKEN"
+      verbose: true
+      cleanup: false
+      keep_history: true
+      url: github.com
+      local_dir: pages/
+      edge: true
+      on:
+        branch:
+        - main
+        - deploy
