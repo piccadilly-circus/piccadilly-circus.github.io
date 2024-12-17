@@ -1,4 +1,4 @@
-dist: focal
+dist: bionic
 language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
