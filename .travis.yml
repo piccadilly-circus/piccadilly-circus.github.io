@@ -1,8 +1,13 @@
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  provider: pages:git
+  token: "$GITHUB_TOKEN"
+  verbose: true
+  cleanup: false
   keep_history: true
-  repo: piccadilly-circus.github.io
+  url: github.com
+  local_dir: pages/
+  edge: true
   on:
-    branch: main
+    branch:
+    - main
+    - deploy
