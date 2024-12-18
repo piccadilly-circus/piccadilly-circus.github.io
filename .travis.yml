@@ -3,7 +3,7 @@ node_js: node
 language: node_js 
 dist: focal
 script:
-- ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
+- sys.puts('Rainbows are fun!';
 - rvm list
 cache:  
 directories:  
