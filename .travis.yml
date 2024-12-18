@@ -9,6 +9,8 @@ cache:
 directories:  
   - node_modules  
 group: stable
+before_install:
+  - gem install net-http -v 0.6.0
 addons:
   deploy:
   - provider: pages:git
