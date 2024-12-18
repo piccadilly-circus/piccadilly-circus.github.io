@@ -18,7 +18,7 @@ addons:
     target_branch: main
     token: "$GITHUB_TOKEN"  
     url: github.com
-    on:
+    'on':
       branch:
       - main
       - deploy
