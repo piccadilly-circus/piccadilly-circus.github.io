@@ -9,9 +9,9 @@ cache:
 directories:  
   - node_modules  
 group: stable
-addons:  
-  deploy:  
-    - provider: pages
+addons:
+  deploy:
+  - provider: pages
     local_dir: pages/  
     target_branch: main
     token: "$GITHUB_TOKEN"
