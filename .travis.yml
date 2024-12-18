@@ -12,7 +12,7 @@ group: stable
 addons:
   deploy:
   - provider: pages:git
-    strategy: git  
+    strategy: git
     skip_cleanup: true
     local_dir: pages/  
     target_branch: main
