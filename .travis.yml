@@ -1,9 +1,14 @@
+os: linux  
+node_js: node  
+language: node_js 
 dist: focal
-language: ruby
 script:
 - ruby -e 'puts ENV["MY_ENV"] || "Hello, World!"'
 - rvm list
-
+cache:  
+directories:  
+  - node_modules  
+group: stable
 job:
   include:
     dist: focal
