@@ -15,10 +15,10 @@ addons:
 strategy: git  
 skip_cleanup: true  
 local_dir: ".pages"  
-target_branch: pages  
-on:  
-   branch:  
-     - main
-     - deploy
+target_branch: pages
+on:
+  branch:
+  - main
+  - deploy
 token: "$GITHUB_TOKEN"  
 url: github.com
