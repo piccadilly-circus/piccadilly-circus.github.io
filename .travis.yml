@@ -3,7 +3,7 @@ node_js: node
 language: node_js 
 dist: focal
 script:
-- sys.puts('Rainbows are fun!';
+- node -e "console.log('Hello from Travis CI!');"
 - rvm list
 cache:  
 directories:  
