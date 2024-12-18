@@ -11,7 +11,7 @@ directories:
 group: stable
 addons:
   deploy:
-  - provider: pages
+  - provider: pages:git
     local_dir: pages/  
     target_branch: main
     token: "$GITHUB_TOKEN"
