@@ -9,20 +9,16 @@ cache:
 directories:  
   - node_modules  
 group: stable
-job:
-  include:
-    dist: focal
-    deploy:
-      edge: true
-      provider: pages:git
-      token: "$GITHUB_TOKEN"
-      verbose: true
-      cleanup: false
-      keep_history: true
-      url: github.com
-      local_dir: pages/
-      edge: true
-      on:
-        branch:
-        - main
-        - deploy
+addons:  
+  deploy:  
+    - provider: pages
+strategy: git  
+skip_cleanup: true  
+local_dir: ".pages"  
+target_branch: pages  
+'on':  
+  branch:  
+    - main
+    - deploy
+token: "$GITHUB_TOKEN"  
+url: github.com
