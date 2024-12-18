@@ -15,3 +15,11 @@ addons:
     local_dir: pages/  
     target_branch: main
     token: "$GITHUB_TOKEN"
+    on:
+      branch:
+        - main
+        - deploy
+on:
+  branch:
+  - main
+  - deploy
